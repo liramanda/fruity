@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "65c43fc8-ebba-4ca0-be9a-1766bb97d002",
+		"name": "Fruityvice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23311089"
+	},
+	"item": [
+		{
+			"name": "Pega Info sobre Frutas por Valor Nutricional",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.fruityvice.com/api/fruit/:nutrition?min=0&max=1000",
+					"protocol": "https",
+					"host": [
+						"www",
+						"fruityvice",
+						"com"
+					],
+					"path": [
+						"api",
+						"fruit",
+						":nutrition"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "0"
+						},
+						{
+							"key": "max",
+							"value": "1000"
+						}
+					],
+					"variable": [
+						{
+							"key": "nutrition",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pega Todas as Frutas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.fruityvice.com/api/fruit/all",
+					"protocol": "https",
+					"host": [
+						"www",
+						"fruityvice",
+						"com"
+					],
+					"path": [
+						"api",
+						"fruit",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pega Frutas de uma dada Família (Latim)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.fruityvice.com//api/fruit/family/:family",
+					"protocol": "https",
+					"host": [
+						"www",
+						"fruityvice",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"fruit",
+						"family",
+						":family"
+					],
+					"variable": [
+						{
+							"key": "family",
+							"value": "laurales"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pega Frutas de um dado Gênero (Latim)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.fruityvice.com/api/fruit/genus/:genus",
+					"protocol": "https",
+					"host": [
+						"www",
+						"fruityvice",
+						"com"
+					],
+					"path": [
+						"api",
+						"fruit",
+						"genus",
+						":genus"
+					],
+					"variable": [
+						{
+							"key": "genus",
+							"value": "persea"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pega Frutas de uma dada Ordem (Latim)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.fruityvice.com/api/fruit/order/:order",
+					"protocol": "https",
+					"host": [
+						"www",
+						"fruityvice",
+						"com"
+					],
+					"path": [
+						"api",
+						"fruit",
+						"order",
+						":order"
+					],
+					"variable": [
+						{
+							"key": "order",
+							"value": "cucurbitales"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adiciona uma Fruta ao Banco de Dados",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"genus\": \"Persea\",\r\n\"name\": \"Avocado\",\r\n\"family\": \"Lauraceae\",\r\n\"order\": \"Laurales\",\r\n\"nutritions\": {\r\n    \"carbohydrates\": 9.0,\r\n    \"protein\": 2.0,\r\n    \"fat\": 15.0,\r\n    \"calories\": 160.0,\r\n    \"sugar\": 0.7\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.fruityvice.com/api/fruit",
+					"protocol": "https",
+					"host": [
+						"www",
+						"fruityvice",
+						"com"
+					],
+					"path": [
+						"api",
+						"fruit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
